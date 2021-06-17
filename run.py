@@ -9,6 +9,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -22,7 +23,36 @@ def services():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-   
+
+
+@app.route("/propertylaw")
+def propertylaw():
+    return render_template("property.html")
+
+
+@app.route("/litigation")
+def litigation():
+    return render_template("litigation.html")
+
+
+@app.route("/immigration")
+def immigration():
+    return render_template("immigration.html")
+
+
+@app.route("/family")
+def family():
+    return render_template("family.html")
+
+
+@app.route("/wills")
+def wills():
+    return render_template("wills.html")
+
+
+@app.route("/employment")
+def employment():
+    return render_template("employment")
 
 
 if __name__ == "__main__":
