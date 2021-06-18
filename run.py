@@ -52,7 +52,22 @@ def wills():
 
 @app.route("/employment")
 def employment():
-    return render_template("employment")
+    return render_template("employment.html")
+
+
+@app.route("/mortgage")
+def mortgage():
+    return render_template("mortgage-info.html")
+
+
+@app.route("/employee")
+def employee():
+    return render_template("employee-info.html")
+
+
+@app.route("/tax")
+def tax():
+    return render_template("tax-info.html")
 
 
 if __name__ == "__main__":
