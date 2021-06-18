@@ -177,7 +177,7 @@ I would highly highly recommend them!"</div>
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Nottreal Solicitors</div></div>
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Nottreal Solicitors <span id= "copyright"></span></div></div>
                     <div class="col-auto">
                         <a class="link-light small" href="#!">Privacy</a>
                         <span class="text-white mx-1">&middot;</span>
@@ -190,7 +190,13 @@ I would highly highly recommend them!"</div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="{{ url_for('static', filename= 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
         <!-- Core theme JS-->
         <script src="{{ url_for('static', filename= 'js/scripts.js') }}"></script>
+
+        <script>
+            $("#copyright").text(new Date().getFullYear());
+        </script>
 </body>
 </html>
