@@ -6,6 +6,8 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
+
 
 # Created routing to link Python to html files.
 
