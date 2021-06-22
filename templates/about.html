@@ -1,32 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2 style="text-decoration: underline;">{{ page_name }}</h2>
-    <p class="cover-container d-flex h-100 p-3 mx-auto flex-column" style="font-size: 18px;">
-        
-        <br>Welcome to Nottreal Solicitors.<br> <br>We are a law firm you can put your trust in.
 
-        Established in 2007, we have been serving our clients very diligently for well over a decade. We provide a wide
-        range of legal services to a diverse range of businesses, not for profit organisations and private individuals.
-        Our main areas of practice are Civil Litigation, Business law, Property, Immigration, Employment and
-        Family law.
+    {% for var in firm %}
 
-        We provide high quality legal advice tailored to both businesses and individuals. We pride ourselves in
-        providing an excellent service to our clients. Our clients are dynamic and sophisticated and we endeavour to
-        meet our clients’ objectives based on their needs. We pay great attention to matching our clients’ requirements
-        with the right skills, delivered cost effectively and within an appropriate timescale. We like to solve problems
-        pragmatically and promptly.
+        <h2 style="text-decoration: underline;">{{ page_name }}</h2>
+        <p class="cover-container d-flex h-100 p-3 mx-auto flex-column" style="font-size: 18px;">
+            
+            <br>Welcome to {{ var.name }}.<br> <br>We are a law firm you can put your trust in.
 
+            {{ var.description }}
+        </p>
 
-        We are far from static; we recognise changes in the market place and react to the needs of our clients. Client
-        care is at the heart of what we do. We have the desire and drive to provide excellent service across the firm.
-    </p>
-
-    <div class="row featurette"></div>
-        <div class="col-md-7"></div>
-            <h3 style="text-decoration: underline;">Our Team</h3>
-    <div class="col-md-5"></div>
-        <img class="img-fluid rounded-3 my-4" src="static/assets/images/team.jpg" alt="">
-                
+        <div class="row featurette"></div>
+            <div class="col-md-7"></div>
+                <h3 style="text-decoration: underline;">Our Team</h3>
+        <div class="col-md-5"></div>
+            <img class="img-fluid rounded-3 my-4" src= "{{ var.image_source }}" alt="">
+    {% endfor %}        
 {% endblock %}
 
 
