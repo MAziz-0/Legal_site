@@ -5,6 +5,7 @@ from flask import (
     flash, redirect, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -38,12 +39,12 @@ def services():
     return render_template("services.html", page_name="Services")
 
 
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
+@app.route("/register", methods=["GET", "POST"])
+def register():
     if request.method == "POST":
         flash("Thanks {}, we have received your message!".format(
             request.form.get("name")))
-    return render_template("contact.html", page_title="Contact Us")
+    return render_template("register.html", page_title="Register")
 
 
 @app.route("/propertylaw")
