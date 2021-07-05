@@ -1,8 +1,8 @@
 import os
 import json
 from flask import (
-    Flask, render_template, request, 
-    flash, redirect, session, url_for)
+    Flask, flash, render_template,
+    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -31,7 +31,7 @@ def about():
     data = []
     with open("data/firm.json", "r") as json_data:
         data = json.load(json_data)
-    return render_template("about.html", page_name="About Us", firm=data)
+    return render_template("about.html", page_title="About", firm=data)
 
 
 @app.route("/services")
@@ -42,8 +42,25 @@ def services():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        flash("Thanks {}, we have received your message!".format(
-            request.form.get("name")))
+        # Check if username already exists in db
+        registered_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()}
+        )
+        flash(
+            "Thanks {}, we have received your message!".format(request.form.get("name"))
+        )
+
+        if registered_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+        }
+        mongo.db.users.insert_one(register)
+        # Put the new user into a new session cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful!")
     return render_template("register.html", page_title="Register")
 
 
@@ -79,7 +96,9 @@ def employment():
 
 @app.route("/mortgage")
 def mortgage():
-    return render_template("mortgage-info.html", page_name="How to get a Mortgage in 2021")
+    return render_template(
+        "mortgage-info.html", page_name="How to get a Mortgage in 2021"
+    )
 
 
 @app.route("/employee")
