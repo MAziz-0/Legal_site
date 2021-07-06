@@ -66,32 +66,32 @@ def register():
 
 @app.route("/propertylaw")
 def propertylaw():
-    return render_template("property.html", page_name="Property")
+    return render_template("property.html", page_name="Property Services")
 
 
 @app.route("/litigation")
 def litigation():
-    return render_template("litigation.html", page_name="Civil Litigation")
+    return render_template("litigation.html", page_name="Civil Litigation Services")
 
 
 @app.route("/immigration")
 def immigration():
-    return render_template("immigration.html", page_name="Home")
+    return render_template("immigration.html", page_name="Immigration Services")
 
 
 @app.route("/family")
 def family():
-    return render_template("family.html", page_name="Family")
+    return render_template("family.html", page_name="Family Law")
 
 
 @app.route("/wills")
 def wills():
-    return render_template("wills.html", page_name="Wills & Probate")
+    return render_template("wills.html", page_name="Wills & Probate Services")
 
 
 @app.route("/employment")
 def employment():
-    return render_template("employment.html", page_name="Employment")
+    return render_template("employment.html", page_name="Employment Law")
 
 
 @app.route("/mortgage")
