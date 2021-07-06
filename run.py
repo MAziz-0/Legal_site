@@ -111,6 +111,11 @@ def tax():
     return render_template("tax-info.html", page_name="Capital Gains Tax")
 
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html", page_name="Contact")
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
