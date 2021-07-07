@@ -1,11 +1,10 @@
 import os
 import json
-from flask import (
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
+from flask import Flask, flash, render_template, redirect, request, session, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+
 if os.path.exists("env.py"):
     import env
 
@@ -46,10 +45,6 @@ def register():
         registered_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()}
         )
-        flash(
-            "Thanks {}, we have received your message!".format(request.form.get("name"))
-        )
-
         if registered_user:
             flash("Username already exists")
             return redirect(url_for("register"))
@@ -62,6 +57,34 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
     return render_template("register.html", page_title="Register")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # Check if username exists in MondoDB
+        registered_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()}
+        )
+
+        if registered_user:
+            # Flash message - Hash password check
+            if check_password_hash(
+                registered_user["password"], request.form.get("password")
+            ):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
 
 
 @app.route("/propertylaw")
@@ -86,7 +109,7 @@ def family():
 
 @app.route("/wills")
 def wills():
-    return render_template("wills.html", page_name="Wills & Probate Services")
+    return render_template("wills.html", page_name="Wills and Probate")
 
 
 @app.route("/employment")
