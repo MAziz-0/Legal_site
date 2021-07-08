@@ -42,9 +42,15 @@
                                     
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Log in</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                            {% if session.user %}
+                                <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Log out</a></li>
+                            
+                            {% else %}
+                                <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Log in</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
+                                
+                            {% endif %} 
                         </ul>
                     </div>
                 </div>
@@ -63,7 +69,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="static/assets/images/lawyers.jpg" alt="..." /></div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="static/assets/images/lawyers.jpg" alt="Team Picture"/></div>
                     </div>
                 </div>
             </header>
