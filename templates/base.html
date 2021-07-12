@@ -44,6 +44,7 @@
                             </li>
                             {% if session.user %}
                                 <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url_for('task') }}">FAQ</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Log out</a></li>
                             
                             {% else %}
@@ -69,7 +70,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="static/assets/images/lawyers.jpg" alt="Team Picture"/></div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="static/assets/images/lawyers.jpg" alt="Team Picture" onerror="this.onerror=null; this.src='static/assets/images/lawyers.jpg'"/></div>
                     </div>
                 </div>
             </header>
@@ -200,7 +201,7 @@ I would highly highly recommend them!"</div>
         <!-- Materialize-->
         
         <!-- Core theme JS-->
-        <script src="{{ url_for('static', filename= 'js/scripts.js') }}"></script>
+        <script src="{{ url_for('static', filename= 'static/js/scripts.js') }}"></script> 
 
         <script>
             $("#copyright").text(new Date().getFullYear());
