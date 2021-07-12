@@ -38,6 +38,13 @@ def services():
     return render_template("services.html", page_name="Services")
 
 
+@app.route("/")
+@app.route("/get_tasks")
+def task():
+    tasks = mongo.db.tasks.find()
+    return render_template("tasks.html", tasks=tasks)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
