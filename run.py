@@ -41,8 +41,8 @@ def services():
 @app.route("/")
 @app.route("/get_tasks")
 def task():
-    tasks = mongo.db.tasks.find()
-    return render_template("tasks.html", tasks=tasks)
+    tasks = list(mongo.db.tasks.find())
+    return render_template("myquestions.html", tasks=tasks)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -82,7 +82,7 @@ def login():
             ):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
-                    request.form.get("username")))   
+                    request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["user"]))
             else:
