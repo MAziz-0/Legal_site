@@ -3,10 +3,10 @@
 
     {% for var in firm %}
 
-        <h2>{{ page_name }}</h2>
+        <h1 class="text-center">{{ page_title }}</h1>
         <p class="cover-container d-flex h-100 p-3 mx-auto flex-column" style="font-size: 18px;">
     
-<div class="card p-3 mb-2 bg-dark text-white" >
+<div class="card p-3 mb-2 bg-light border-0" >
     <div class="card-body"> 
             <br>Welcome to {{ var.name }}.<br> <br>We are a law firm you can put your trust in.
 
@@ -17,9 +17,11 @@
 <br>
         <div class="row featurette"></div>
             <div class="col-md-7"></div>
-                <h3>Our Team</h3>
-        <div class="col-md-5"></div>
+                <h3 class="text-center">Our Team</h3>
+        <div class="col-md-5 m-auto">
             <img class="img-fluid rounded-3 my-4" src= "{{ var.image_source }}" alt="">
+        </div>
+            
       
 </div>  
     {% endfor %}        
