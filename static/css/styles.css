@@ -10865,3 +10865,16 @@ html {
   margin-bottom: 2.5rem;
 }
 
+.my-blue{
+  color:#2b4e9a;
+}
+
+.accordion-button{
+border-bottom: #2b4e9a 1px solid;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #2b4e9a;
+  background-color: #e7f1ff;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
