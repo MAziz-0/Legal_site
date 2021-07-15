@@ -172,7 +172,8 @@ def contact():
 
 @app.route("/add_question")
 def add_question():
-    return render_template("add_question.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_question.html", categories=categories)
 
 
 if __name__ == "__main__":
