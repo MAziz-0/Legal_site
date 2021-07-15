@@ -1,18 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="bg-white my-blue text-center">Add Question</h3>
+<h3 class="bg-white my-blue text-center">Make a Query</h3>
 <br>
-<div class="col-md">
+<form>
+  <div class="col-md-2">
     <div class="form-floating">
-      <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-        <option selected>Choose an option</option>
-        <option value="1">Immigration</option>
-        <option value="2">Property</option>
-        <option value="3">Family</option>
+      <select class="form-select my-blue border-bottom bg-light" id="task_type" name="task_type" aria-label="task_type">
+        <option value >Choose an option</option>
+      {% for category in categories %}
+        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+      {% endfor %}
       </select>
-      <label for="floatingSelectGrid">Legal Areas</label>
+      <label for="floatingSelectGrid">Services:</label>
     </div>
   </div>
+  <br>
+  <div class="col-md-3">
+    <input class="form-control my-blue bg-light" type="text" placeholder="Subject name" id="task_name">
+  </div>
+  <br>
+  <div class="col-md-5 form-group">
+    <textarea class="form-control my-blue bg-light" id="task_description" name="task_description" rows="3"
+      placeholder="Type your query here..." minlength="5" maxlength="300"></textarea>
+  </div>
+</form>
 
 {% endblock %}
