@@ -1,25 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
 
-        <div class="accordion " id="accordionExample">
-          {% for task in tasks %}
-          <div class="accordion-item border-0 bg-light">
-            <h2 class="accordion-header" id="heading-{{ task.task_id }}">
-              <button class="accordion-button bg-white my-blue" type="button text-white" data-bs-toggle="collapse" data-bs-target="#collapse-{{ task.task_id }}" aria-expanded="true" aria-controls="collapse-{{ task.task_id }}">
-                <strong>{{ task.task_name }}</strong>
-              </button>
-            </h2>
-            <div id="collapse-{{ task.task_id }}" class="accordion-collapse collapse" aria-labelledby="heading-{{ task.task_id }}">
-              <div class="accordion-body">
-                <strong>{{ task.category_name }}</strong> 
-                <p>{{ task.task_description }}</p>
-              </div>
-            </div>
-          </div>
-          <br>
-          {% endfor %}
-        </div>
+<h3 class="bg-white my-blue text-center">My Queries</h3>
+<br>
 
-        
-      
+<div class="accordion " id="accordionExample">
+  {% for task in tasks %}
+  <div class="accordion-item border-0 bg-light">
+    <h2 class="accordion-header" id="heading-{{ task.task_id }}">
+      <button class="accordion-button bg-white my-blue" type="button text-white" data-bs-toggle="collapse"
+        data-bs-target="#collapse-{{ task.task_id }}" aria-expanded="true" aria-controls="collapse-{{ task.task_id }}">
+        <strong>{{ task.task_name }}</strong>
+      </button>
+    </h2>
+    <div id="collapse-{{ task.task_id }}" class="accordion-collapse collapse"
+      aria-labelledby="heading-{{ task.task_id }}">
+      <div class="accordion-body">
+        <strong>{{ task.category_type }}</strong>
+        <p>{{ task.task_description }}</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  {% endfor %}
+</div>
+
+
+
 {% endblock %}
