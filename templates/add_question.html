@@ -1,29 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="bg-white my-blue text-center">Make a Query</h3>
+<!-- Flash message-->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<p class="text-center">{{msg}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<h2 class="bg-white my-blue text-center">Ask us a question</h2>
 <br>
-<form>
-  <div class="col-md-2">
-    <div class="form-floating">
-      <select class="form-select my-blue border-bottom bg-light" id="task_type" name="task_type" aria-label="task_type">
-        <option value >Choose an option</option>
-      {% for category in categories %}
-        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-      {% endfor %}
-      </select>
-      <label for="floatingSelectGrid">Services:</label>
-    </div>
-  </div>
-  <br>
-  <div class="col-md-3">
-    <input class="form-control my-blue bg-light" type="text" placeholder="Subject name" id="task_name">
-  </div>
-  <br>
-  <div class="col-md-5 form-group">
-    <textarea class="form-control my-blue bg-light" id="task_description" name="task_description" rows="3"
-      placeholder="Type your query here..." minlength="5" maxlength="300"></textarea>
-  </div>
-</form>
+<div class="rounded-3 py-5 px-4 px-md-5 mb-5">
+  <div class="text-center mb-5">
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-8 col-xl-6 form-floating">
+        <form method="POST" action="{{ url_for('add_question') }}">
+          <!-- Choose category-->
+          <div class="form-floating mb-3">
+            <select class="form-select my-blue border-bottom bg-light" id="task_type" name="task_type"
+              aria-label="task_type">
+              <option value>Choose an option</option>
+              {% for category in categories %}
+              <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+              {% endfor %}
+            </select>
+            <label for="floatingSelectGrid">Services:</label>
+          </div>
+          <!-- Subject name-->
+          <div class="form-floating mb-3">
+            <input class="form-control my-blue bg-light" type="text" id="task_name">
+            <label for="floatingSelectGrid">Subject:</label>
+          </div>
+          <!-- Query text box-->
+          <div class="form-group mb-3">
+            <textarea class="form-control my-blue bg-light" id="task_description" name="task_description" rows="3"
+              placeholder="Type your query here..." minlength="5" maxlength="300"></textarea>
+          </div>
 
-{% endblock %}
+          <!-- Submit Button-->
+          <div class="d-grid"><button class="btn btn-primary my-blue text-white btn-lg" id="submitButton"
+              type="submit">Submit Query</button></div>
+        </form>
+      </div>
+    </div>
+
+    {% endblock %}
