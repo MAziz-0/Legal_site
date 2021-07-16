@@ -8,16 +8,22 @@
   {% for task in tasks %}
   <div class="accordion-item border-0 bg-light">
     <h2 class="accordion-header" id="heading-{{ task.task_id }}">
-      <button class="accordion-button bg-white my-blue" type="button text-white" data-bs-toggle="collapse"
-        data-bs-target="#collapse-{{ task.task_id }}" aria-expanded="true" aria-controls="collapse-{{ task.task_id }}">
-        <strong>{{ task.task_name }}</strong>
-      </button>
+      <div>
+        <button class="accordion-button bg-white my-blue" type="button text-white" data-bs-toggle="collapse"
+          data-bs-target="#collapse-{{ task.task_id }}" aria-expanded="true"
+          aria-controls="collapse-{{ task.task_id }}">
+          <strong> Subject | {{ task.task_name }} </strong>
+        </button>
+      </div>
     </h2>
     <div id="collapse-{{ task.task_id }}" class="accordion-collapse collapse"
       aria-labelledby="heading-{{ task.task_id }}">
       <div class="accordion-body">
-        <strong>{{ task.category_type }}</strong>
-        <p>{{ task.task_description }}</p>
+        <div class="button-placement">
+          <button type="button" class="btn btn-outline-primary my-blue">EDIT</button>
+          <button type="button" class="btn btn-outline-success">SAVE</button>
+        </div>
+        <p>Q.  {{ task.task_description }}</p> 
       </div>
     </div>
   </div>
