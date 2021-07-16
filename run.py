@@ -170,8 +170,21 @@ def contact():
     return render_template("contact.html", page_name="Contact")
 
 
-@app.route("/add_question")
+@app.route("/add_question", methods=["GET", "POST"])
 def add_question():
+    if request.method == "POST":
+        question = {
+            "category_type": request.form.get("category_type"),
+            "category_name": request.form.get("category_name"),
+            "task_name": request.form.get("task_name"),
+            "task_description": request.form.get("task_description")
+        
+        }
+        mongo.db.tasks.insert_one(question)
+        flash("Submitted successfully. You will receive an answer shortly from one of our professional advisors.")
+        return redirect(url_for("add_question"))
+
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_question.html", categories=categories)
 
