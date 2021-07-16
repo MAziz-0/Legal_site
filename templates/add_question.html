@@ -18,7 +18,7 @@
         <form method="POST" action="{{ url_for('add_question') }}">
           <!-- Choose category-->
           <div class="form-floating mb-3">
-            <select class="form-select my-blue border-bottom bg-light" id="task_type" name="task_type"
+            <select class="form-select my-blue border-bottom bg-light" id="category_name" name="category_name" required
               aria-label="task_type">
               <option value>Choose an option</option>
               {% for category in categories %}
@@ -29,13 +29,13 @@
           </div>
           <!-- Subject name-->
           <div class="form-floating mb-3">
-            <input class="form-control my-blue bg-light" type="text" id="task_name">
+            <input class="form-control my-blue bg-light" type="text" id="task_name" name="task_name" required>
             <label for="floatingSelectGrid">Subject:</label>
           </div>
           <!-- Query text box-->
           <div class="form-group mb-3">
             <textarea class="form-control my-blue bg-light" id="task_description" name="task_description" rows="3"
-              placeholder="Type your query here..." minlength="5" maxlength="300"></textarea>
+              placeholder="Type your query here..." minlength="5" maxlength="300" required></textarea>
           </div>
 
           <!-- Submit Button-->
