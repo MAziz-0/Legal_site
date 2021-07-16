@@ -26,7 +26,7 @@
 </head>
 
 <body class="bg-light">
-
+<!-- Flash message-->
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     {% for msg in messages %}
@@ -112,7 +112,7 @@
                         <div class="text-center text-danger mb-3">Error sending message!</div>
                     </div>
                     <!-- Submit Button-->
-                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton"
+                    <div class="d-grid"><button class="btn btn-primary my-blue text-white btn-lg" id="submitButton"
                             type="submit">Login</button></div>
                 </form>
             </div>
