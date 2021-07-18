@@ -1,6 +1,8 @@
 import os
 import json
-from flask import Flask, flash, render_template, redirect, request, session, url_for
+from flask import (
+    Flask, flash, render_template, 
+    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -125,12 +127,14 @@ def propertylaw():
 
 @app.route("/litigation")
 def litigation():
-    return render_template("litigation.html", page_name="Civil Litigation Services")
+    return render_template(
+        "litigation.html", page_name="Civil Litigation Services")
 
 
 @app.route("/immigration")
 def immigration():
-    return render_template("immigration.html", page_name="Immigration Services")
+    return render_template(
+        "immigration.html", page_name="Immigration Services")
 
 
 @app.route("/family")
@@ -178,15 +182,22 @@ def add_question():
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description")
-        
+
         }
         mongo.db.tasks.insert_one(question)
         flash("Submitted successfully. You will receive an answer shortly from one of our professional advisors.")
         return redirect(url_for("add_question"))
 
-
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_question.html", categories=categories)
+
+
+
+@app.route("/edit_question/<task_id>", methods=["GET", "POST"])
+def edit_task(task_id):
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_question.html", task=task, categories=categories)
 
 
 if __name__ == "__main__":
