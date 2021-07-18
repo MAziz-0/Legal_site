@@ -1,7 +1,7 @@
 import os
 import json
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -83,10 +83,8 @@ def login():
                 registered_user["password"], request.form.get("password")
             ):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(
-                    request.form.get("username")))
-                return redirect(url_for(
-                    "profile", username=session["user"]))
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -139,12 +137,14 @@ def immigration():
 
 @app.route("/family")
 def family():
-    return render_template("family.html", page_name="Family Law")
+    return render_template(
+        "family.html", page_name="Family Law")
 
 
 @app.route("/wills")
 def wills():
-    return render_template("wills.html", page_name="Wills and Probate")
+    return render_template(
+        "wills.html", page_name="Wills and Probate")
 
 
 @app.route("/employment")
@@ -181,23 +181,22 @@ def add_question():
             "category_type": request.form.get("category_type"),
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
-            "task_description": request.form.get("task_description")
-
+            "task_description": request.form.get("task_description"),
         }
         mongo.db.tasks.insert_one(question)
-        flash("Submitted successfully. You will receive an answer shortly from one of our professional advisors.")
+        flash("Submitted successfully. You will receive an answer shortly.")
         return redirect(url_for("add_question"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_question.html", categories=categories)
 
 
-
 @app.route("/edit_question/<task_id>", methods=["GET", "POST"])
-def edit_task(task_id):
+def edit_question(task_id):
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_question.html", task=task, categories=categories)
+    return render_template(
+        "edit_question.html", task=task, categories=categories)
 
 
 if __name__ == "__main__":
