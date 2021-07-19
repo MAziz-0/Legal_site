@@ -80,8 +80,7 @@ def login():
         if registered_user:
             # Flash message - Hash password check
             if check_password_hash(
-                registered_user["password"], request.form.get("password")
-            ):
+                registered_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
@@ -178,10 +177,11 @@ def contact():
 def add_question():
     if request.method == "POST":
         question = {
-            "category_type": request.form.get("category_type"),
+            "task_num": request.form.get("task_num"),
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
+            "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(question)
         flash("Submitted successfully. You will receive an answer shortly.")
@@ -193,6 +193,17 @@ def add_question():
 
 @app.route("/edit_question/<task_id>", methods=["GET", "POST"])
 def edit_question(task_id):
+    if request.method == "POST":
+        update = {
+            "task_num": request.form.get("task_num"),
+            "category_name": request.form.get("category_name"),
+            "task_name": request.form.get("task_name"),
+            "task_description": request.form.get("task_description"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.update({"_id": ObjectId(task_id)}, update)
+        flash("Update successful")
+        return redirect(url_for("add_question"))
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
