@@ -16,6 +16,7 @@
 </div>
 
 <br>
+{% if tasks|length > 0 %}
 <!-- Accordian-->
 <div class="accordion " id="accordionExample">
   {% for task in tasks %}
@@ -46,6 +47,9 @@
   <br>
   {% endfor %}
 </div>
+{% else %}
+        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+{% endif %}
 
 
 
