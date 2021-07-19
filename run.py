@@ -210,6 +210,13 @@ def edit_question(task_id):
         "edit_question.html", task=task, categories=categories)
 
 
+@app.route("/delete_question/<task_id>")
+def delete_question(task_id):
+    mongo.db.tasks.remove({"_id": ObjectId(task_id)})
+    flash("Successfully Deleted")
+    return redirect(url_for("task"))
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
