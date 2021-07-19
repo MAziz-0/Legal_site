@@ -5,6 +5,17 @@
 <br>
 <h6 class="bg-white my-blue text-center">Recently asked questions</h6>
 <br>
+<div class="input-group rounded">
+  <div class="col-xs-2">
+    <form action="{{ url_for('search') }}"method="post">
+      <input type="text" name="query" id="query" minlength="3" class="validate" aria-describedby="search-addon"/>
+      <label for="query"></label>
+    <button type="submit" class="btn btn-primary my-blue text-white rounded">Search</button>
+    </form>
+  </div>
+</div>
+
+<br>
 <!-- Accordian-->
 <div class="accordion " id="accordionExample">
   {% for task in tasks %}
