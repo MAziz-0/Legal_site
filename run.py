@@ -46,7 +46,7 @@ def task():
     tasks = list(mongo.db.tasks.find())
     return render_template("myquestions.html", tasks=tasks)
 
-
+# Searching existing queries
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -179,7 +179,7 @@ def tax():
 def contact():
     return render_template("contact.html", page_name="Contact")
 
-
+# Creating a new query
 @app.route("/add_question", methods=["GET", "POST"])
 def add_question():
     if request.method == "POST":
@@ -197,7 +197,7 @@ def add_question():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_question.html", categories=categories)
 
-
+# Editing Query
 @app.route("/edit_question/<task_id>", methods=["GET", "POST"])
 def edit_question(task_id):
     if request.method == "POST":
@@ -216,7 +216,7 @@ def edit_question(task_id):
     return render_template(
         "edit_question.html", task=task, categories=categories)
 
-
+# Deleting a query
 @app.route("/delete_question/<task_id>")
 def delete_question(task_id):
     mongo.db.tasks.remove({"_id": ObjectId(task_id)})
