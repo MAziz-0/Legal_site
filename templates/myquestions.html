@@ -5,6 +5,7 @@
 <br>
 <h6 class="bg-white my-blue text-center">Recently asked questions</h6>
 <br>
+<!-- Search Bar-->
 <div class="input-group rounded">
   <div class="col-xs-2">
     <form action="{{ url_for('search') }}"method="post">
@@ -16,6 +17,7 @@
 </div>
 
 <br>
+<!-- Statement to check results-->
 {% if tasks|length > 0 %}
 <!-- Accordian-->
 <div class="accordion " id="accordionExample">
@@ -34,6 +36,7 @@
       aria-labelledby="heading-{{ task.task_num }}">
       <div class="accordion-body">
         <div class="button-placement">
+        <!-- Shows content if session is logged in by user-->
         {% if session.user|lower == task.created_by|lower %} 
           <a href="{{ url_for('edit_question', task_id=task._id) }}" type = button class="btn btn-primary">EDIT</a>
           <a href="{{ url_for('delete_question', task_id=task._id) }}" type = button class="btn btn-success">Delete</a>
