@@ -177,7 +177,7 @@ def tax():
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html", page_name="Contact")
+    return render_template("contact.html", page_name="Contact Us")
 
 # Creating a new query
 @app.route("/add_question", methods=["GET", "POST"])
