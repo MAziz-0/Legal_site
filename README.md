@@ -88,8 +88,8 @@ I have created a web application fit to showcase a faux solicitors firm, Nottrea
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure no syntax errors.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126494547-baee4fec-3f8d-467c-b029-246fd333bbad.JPG)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126495898-e6aef95a-5954-4316-a6d9-25b8e0c9572a.JPG)
-- Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator,which had multiple parsing errors out of my control.
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126573137-e0b77bed-258a-491c-92e5-d6e64168f775.JPG)
+
 
 ### Testing User Stories from User Experience (UX) Section
 
