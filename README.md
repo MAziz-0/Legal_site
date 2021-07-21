@@ -89,7 +89,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126494547-baee4fec-3f8d-467c-b029-246fd333bbad.JPG)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126495898-e6aef95a-5954-4316-a6d9-25b8e0c9572a.JPG
-* Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator, which had multiple parsing errors out of my control.
+
+(Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator, which had multiple parsing errors out of my control.)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -109,9 +110,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. I can register an account without any issues, which allows me to see a profile page and the message board system, a flash message alerts me that I have logged in properly.
 
           - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126497699-6428264d-fc79-4f1f-9499-c8afb20a00b1.JPG)
+
           - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126497758-d7423de5-2347-4590-a007-ffefd2efca06.JPG)
 
     3. Logging in, an incorrect username shows a flash message.
+
           - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126498666-bea654dc-8ffa-436e-b62d-a2ed09508679.JPG)
 
     3. As a First Time Visitor, I want to register and manipulate my data.
@@ -119,6 +122,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         1. I can register and log in to my account, which allows me to see the New query page and Message Board.
         
           - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499391-9535b57f-4326-4b0c-8760-3209efea2c9f.JPG)
+
           - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499543-991e83ef-ecdc-42d1-85e8-9dcbb6c6147f.JPG)
 
         2. I can Edit/Update and Delete queries that I have created.
@@ -173,7 +177,9 @@ The project was deployed to Heroku using the following steps.
 2. Procfile is what Heroku looks for to know which file runs the app, and how to run it, so we'll use the echo command to create a Procfile.
 3. Log into Heroku and "Create New App" and name the app appropriately. Select the region closest to you and create.
 4. We can use Heroku CLI or, to simplify the process, set up Automatic Deployment from our GitHub repository under the deploy tab in Heroku. Search Repository name and then add.
+
 [More info](https://devcenter.heroku.com/articles/heroku-cli)
+
 5. Before we start Automatic deployment, create a Config variable file under "Rev Config Vars" to tell Heroku what variables are needed. Make sure "Procfiles" and all required files have been pushed to the Repository before connecting.
 6. Click on connect to Github repository, and now we can click on Automatic deployment, which will push the master to Heroku.
 7. Click "View" to launch your new deployed app.
