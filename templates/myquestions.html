@@ -6,7 +6,7 @@
 <h6 class="bg-white my-blue text-center">Recently asked questions</h6>
 <br>
 <!-- Search Bar-->
-<div class="input-group rounded">
+<div class="rounded text-center">
   <div class="col-xs-2">
     <form action="{{ url_for('search') }}" method="post">
       <input type="text" name="query" id="query" minlength="3" class="validate" aria-describedby="search-addon" />
@@ -23,17 +23,17 @@
 <div class="accordion " id="accordionExample">
   {% for task in tasks %}
   <div class="accordion-item border-0 bg-light">
-    <h2 class="accordion-header" id="heading-{{ task.task_num }}">
+    <h2 class="accordion-header" id="heading-{{ task._id }}">
       <div>
         <button class="accordion-button bg-white my-blue" type="button text-white" data-bs-toggle="collapse"
-          data-bs-target="#collapse-{{ task.task_num }}" aria-expanded="true"
-          aria-controls="collapse-{{ task.task_num }}">
+          data-bs-target="#collapse-{{ task._id }}" aria-expanded="true"
+          aria-controls="collapse-{{ task._id }}">
           <strong> {{ task.category_name }} | {{ task.task_name }} <p style="font-size: xx-small;"><em>created by: {{ task.created_by }}</em></p> </strong>
         </button>
       </div>
     </h2>
-    <div id="collapse-{{ task.task_num }}" class="accordion-collapse collapse"
-      aria-labelledby="heading-{{ task.task_num }}">
+    <div id="collapse-{{ task._id }}" class="accordion-collapse collapse"
+      aria-labelledby="heading-{{ task._id }}">
       <div class="accordion-body">
         <div class="button-placement">
           <!-- Shows content if session is logged in by user-->
