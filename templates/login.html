@@ -24,14 +24,7 @@
 </head>
 
 <body class="bg-light">
-    <!-- Flash message-->
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    {% for msg in messages %}
-    <p class="text-center">{{msg}}</p>
-    {% endfor %}
-    {% endif %}
-    {% endwith %}
+
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark back-color">
         <div class="container px-5">
@@ -72,6 +65,14 @@
             </div>
         </div>
     </nav>
+     <!-- Flash message-->
+     {% with messages = get_flashed_messages() %}
+     {% if messages %}
+     {% for msg in messages %}
+     <p class="text-center">{{msg}}</p>
+     {% endfor %}
+     {% endif %}
+     {% endwith %}
     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
         <div class="text-center mb-5">
             <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope purple"></i>
