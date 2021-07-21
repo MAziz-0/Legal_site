@@ -4,15 +4,15 @@
 
 I have created a web application fit to showcase a faux solictors firm Nottreal Solicitors which is inspired by the firms I have worked at in the past. Using my experience in the Legal sector I created a clean and approachable website that is a centerpiece for clients/potential clients to interact with. The Website consists of easily readable information pertaining the services it provides and articles on Legal and Financial news with the Message board being the key feature of the website bringing the consultation procedure directly to clients.
 
-<h2 align="center"><img src="https://user-images.githubusercontent.com/41737293/126453913-4c77d2ff-69a3-48c5-8fe0-1812047b7dd3.JPG"></h2>
+<h2 align="center"><img src="https://user-images.githubusercontent.com/41737293/126453913-4c77d2ff-69a3-48c5-8fe0-1812047b7dd3.PNG"></h2>
 
 
 ### Project Specifications
 
 | CRITERIA | MEETS SPECIFICATIONS
 |---|:---
-| Splash Screen | The user is greeted with a splash screen introducing the firm. There is a features section, a testomonial and articles.
-| Services | The website provided seperate page with information on services the firm provides.
+| Home page | The user is greeted with a Home page which is the foundation of the website introducing the firm through its features section, a testomonial sections and blog system.
+| Services | The website has seperate pages with information on services the firm provides.
 | User Authentication | User can register an account which allows them the ability to log in and log out.
 | Blog Articles| Article cards are available on the home page to provide Legal and Financial news.
 | Message Board | Once registered and logged in, users can ask questions using the New query page or they can search pre-existing questions. Questions they have asked have CRUD features implemented allowing them to manipulate their own data.
@@ -49,7 +49,7 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 
 *   ### Wireframes
 
-    -  Wireframe - [View](https://user-images.githubusercontent.com/41737293/126455811-def56c72-13dd-4e5a-8e68-b0bd971de246.JPG)
+    -  Wireframe - [View](https://user-images.githubusercontent.com/41737293/126455811-def56c72-13dd-4e5a-8e68-b0bd971de246.PNG)
 
    
 ## Features
@@ -81,13 +81,13 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 1. [Heroku:](https://en.wikipedia.org/wiki/Heroku)
     - Heroku is used to store the project's code after being pushed from Git and allows us to deploy the project live.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://user-images.githubusercontent.com/41737293/126455811-def56c72-13dd-4e5a-8e68-b0bd971de246.JPG) during the design process.
+    - Balsamiq was used to create the [wireframes](https://user-images.githubusercontent.com/41737293/126455811-def56c72-13dd-4e5a-8e68-b0bd971de246.PNG) during the design process.
 
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/115413470-1bc2bb80-a1ed-11eb-961f-a024e333d2c4.PNG)
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126494547-baee4fec-3f8d-467c-b029-246fd333bbad.PNG)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/115413571-31d07c00-a1ed-11eb-8a3c-d53d654d40d8.PNG)
 
 ### Testing User Stories from User Experience (UX) Section
