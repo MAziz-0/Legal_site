@@ -8,10 +8,10 @@
 <!-- Search Bar-->
 <div class="input-group rounded">
   <div class="col-xs-2">
-    <form action="{{ url_for('search') }}"method="post">
-      <input type="text" name="query" id="query" minlength="3" class="validate" aria-describedby="search-addon"/>
+    <form action="{{ url_for('search') }}" method="post">
+      <input type="text" name="query" id="query" minlength="3" class="validate" aria-describedby="search-addon" />
       <label for="query"></label>
-    <button type="submit" class="btn btn-primary my-blue text-white rounded">Search</button>
+      <button type="submit" class="btn btn-primary my-blue text-white rounded">Search</button>
     </form>
   </div>
 </div>
@@ -22,13 +22,13 @@
 <!-- Accordian-->
 <div class="accordion " id="accordionExample">
   {% for task in tasks %}
-  <div class="accordion-item border-0 bg-light">  
+  <div class="accordion-item border-0 bg-light">
     <h2 class="accordion-header" id="heading-{{ task.task_num }}">
       <div>
         <button class="accordion-button bg-white my-blue" type="button text-white" data-bs-toggle="collapse"
           data-bs-target="#collapse-{{ task.task_num }}" aria-expanded="true"
           aria-controls="collapse-{{ task.task_num }}">
-          <strong> {{ task.category_name }} | {{ task.task_name }}  </strong>
+          <strong> {{ task.category_name }} | {{ task.task_name }} <p style="font-size: xx-small;"><em>created by: {{ task.created_by }}</em></p> </strong>
         </button>
       </div>
     </h2>
@@ -36,14 +36,13 @@
       aria-labelledby="heading-{{ task.task_num }}">
       <div class="accordion-body">
         <div class="button-placement">
-        <!-- Shows content if session is logged in by user-->
-        {% if session.user|lower == task.created_by|lower %} 
-          <a href="{{ url_for('edit_question', task_id=task._id) }}" type = button class="btn btn-primary">EDIT</a>
-          <a href="{{ url_for('delete_question', task_id=task._id) }}" type = button class="btn btn-success">Delete</a>
-        {% endif %}
+          <!-- Shows content if session is logged in by user-->
+          {% if session.user|lower == task.created_by|lower %}
+          <a href="{{ url_for('edit_question', task_id=task._id) }}" type=button class="btn btn-primary">EDIT</a>
+          <a href="{{ url_for('delete_question', task_id=task._id) }}" type=button class="btn btn-success">Delete</a>
+          {% endif %}
         </div>
-        <p>Q.  {{ task.task_description }}</p>
-        <p><em>by: {{ task.created_by }}</em></p>
+        <p>Q. {{ task.task_description }}</p>
       </div>
     </div>
   </div>
@@ -51,7 +50,7 @@
   {% endfor %}
 </div>
 {% else %}
-        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+<h3 class="red-text text-darken-4 center-align">No Results Found</h3>
 {% endif %}
 
 

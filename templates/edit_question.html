@@ -21,7 +21,6 @@
   <link href="css/styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-  <title></title>
 </head>
 
 <body class="bg-light">
@@ -88,24 +87,26 @@
                 required aria-label="task_type">
                 <option value="" disabled>Choose an option</option>
                 {% for category in categories %}
-                  {% if category.category_name == task.category_name %}
-                  <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                  {% else %}
-                  <option value="{{ category.category_name }}">{{- category.category_name -}}</option>
-                  {% endif %}
+                {% if category.category_name == task.category_name %}
+                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                {% else %}
+                <option value="{{ category.category_name }}">{{- category.category_name -}}</option>
+                {% endif %}
                 {% endfor %}
               </select>
               <label for="floatingSelectGrid">Services:</label>
             </div>
             <!-- Subject name-->
             <div class="form-floating mb-3">
-              <input class="form-control my-blue bg-light" type="text" id="task_name" name="task_name" value="{{ task.task_name }}" required>
+              <input class="form-control my-blue bg-light" type="text" id="task_name" name="task_name"
+                value="{{ task.task_name }}" required>
               <label for="floatingSelectGrid">Subject:</label>
             </div>
             <!-- Query text box-->
             <div class="form-group mb-3">
               <textarea class="form-control my-blue bg-light" id="task_description" name="task_description" rows="3"
-                placeholder="Type your query here..." minlength="5" maxlength="300" required>{{- task.task_description -}}</textarea>
+                placeholder="Type your query here..." minlength="5" maxlength="300"
+                required>{{- task.task_description -}}</textarea>
             </div>
 
             <!-- Submit Button and cancel button-->
@@ -114,7 +115,7 @@
             </div>
             <br>
             <div>
-              <a href="{{ url_for('task') }}" type = button class="btn btn-outline-danger">Cancel</a>
+              <a href="{{ url_for('task') }}" type=button class="btn btn-outline-danger">Cancel</a>
             </div>
           </form>
         </div>

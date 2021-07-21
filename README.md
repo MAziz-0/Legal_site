@@ -1,28 +1,22 @@
 <h1 align="center">Nottreal Solicitors</h1>
 
-[View the live project here.](https://maziz-0.github.io/Naruto-Memories/)
+[View the live project here.](https://nottreal-solicitors.herokuapp.com/)
 
 I have created a web application fit to showcase a faux solictors firm Nottreal Solicitors which is inspired by the firms I have worked at in the past. Using my experience in the Legal sector I created a clean and approachable website that is a centerpiece for clients/potential clients to interact with. The Website consists of easily readable information pertaining the services it provides and articles on Legal and Financial news with the Message board being the key feature of the website bringing the consultation procedure directly to clients.
 
-<h2 align="center"><img src="https://user-images.githubusercontent.com/41737293/115557943-1f684800-a2aa-11eb-9930-e8ef156e19e5.JPG"></h2>
+<h2 align="center"><img src="https://user-images.githubusercontent.com/41737293/126453913-4c77d2ff-69a3-48c5-8fe0-1812047b7dd3.JPG"></h2>
 
-
-## How to Play
-1. Click on any card to reveal all the cards; memorise the card pairs before they flip back.
-2. Click on any card to start the timer.
-3. Use your memory to remember what images show up on which card. You have 30 seconds to match all the cards
-4. You win the game when all 16 cards are matched!
 
 ### Project Specifications
 
 | CRITERIA | MEETS SPECIFICATIONS
 |---|:---
-| Splash Screen | The players are greeted with a splash screen introducing the story behind the game. How to play is on the splash screen.
-| Memory Game Logic | The game randomly shuffles the cards. A user wins once all cards have successfully been matched.
-| Victory Popup | When a user wins the game, a custom Sweet Alert appears to congratulate the player and asks if they want to try again or learn about the developer. 
-| Loss Popup | When a user loses the game, a custom Sweet Alert appears to further the storyline set out from the splash screen and also asks if they want to play again or learn about the developer. 
-| Timer | When the player starts a game, a timer of 30 seconds should also begin. Once the player wins the game, the timer stops.
-| Double click | Users can double click a card to return its original position.
+| Splash Screen | The user is greeted with a splash screen introducing the firm. There is a features section, a testomonial and articles.
+| Services | The website provided seperate page with information on services the firm provides.
+| User Authentication | User can register an account which allows them the ability to log in and log out.
+| Blog Articles| Article cards are available on the home page to provide Legal and Financial news.
+| Message Board | Once registered and logged in, users can ask questions using the New query page or they can search pre-existing questions. Questions they have asked have CRUD features implemented allowing them to manipulate their own data.
+
 
 ## User Experience (UX)
 
@@ -30,32 +24,32 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to be pulled in by the theme of the website/game.
-        2. As a First Time Visitor, I want to play the game as intended for it to function.
-        3. As a First Time Visitor, I want to learn more about the developer.
+        1. As a First Time Visitor, I want to be pulled in by the presentation of the website.
+        2. As a First Time Visitor, I want to use the website as intended for it to function.
+        3. As a First Time Visitor, I want to be able to register and manipulate my data.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to see if the game is fun being replayed.
-        2. As a Returning Visitor, I want to find the best way to find out more about the developer.
+        1. As a Returning Visitor, I want to see that my question are visible on the message board and I can get the information I need.
+        2. As a Returning Visitor, I want to be able to Edit/Update or even delete the queries I have posted.
         
 
     -   #### Frequent User Goals
-        1. As a Frequent User, I want to check to see if there are any newly added challenges or updates.
-        2. As a Frequent User, I want to check to see if there are any new features.
-        3. As a Frequent User, I want always to have fun playing the game; replayability is crucial.
+        1. As a Frequent User, I want to check to see if I can log into my account without issue.
+        2. As a Frequent User, I want to check to see if there are any new featurettes in the Article cards
+        3. As a Frequent User, I want always to be able to navigate the website and find things where they are supposed to be.
 
 -   ### Design
     -   #### Colour Scheme
-        The two main colours represent the main character's (Naruto) colour scheme: orange and black.
+        The two main colours represent the firms company branding.
     -   #### Typography
-        -   The Acme font is the main font used throughout the whole website, with Sans Serif as the fallback font. Acme is a stylistic font used to achieve a vintage flash game look, so it is both attractive and appropriate.
+        -   The Segoe UI font is the main font used throughout the whole website. Segoe is standardised and used to achieve a professional and easy to read website, it is both attractive and appropriate.
     -   #### Imagery
-        -   Imagery is vital. The large background hero image is designed to be a striking centrepiece as if the user is in the midst of the battle. It also has a minimalist colour scheme that does not clash with the Orange/Black palette.
+        -   Imagery is vital. The background hero images on the splash screen and About sections are designed to create familiarity with staff and putting a face behind the brand. .
 
 *   ### Wireframes
 
-    -  Wireframe - [View](https://user-images.githubusercontent.com/41737293/115411820-b91cf000-a1eb-11eb-8c64-47ec6c2f3150.png)
+    -  Wireframe - [View](https://user-images.githubusercontent.com/41737293/126455811-def56c72-13dd-4e5a-8e68-b0bd971de246.JPG)
 
    
 ## Features
@@ -70,25 +64,24 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+-   [MongoDB](https://en.wikipedia.org/wiki/MongoDB)
+
 
 ### Frameworks, Libraries & Programs Used
 
-
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Titillium Web' font into the style.css file, which is used on all pages throughout the project.
-1. [jQuery:](https://jquery.com/)
-    - jQuery was used for the card game logic.
-1. [SweetAlert2](https://sweetalert2.github.io/)
-    -  SweetAlert2 was used to create the Victory and Loss alerts.
+1. [Bootstrap](https://getbootstrap.com/)
+    -  Bootstrap was used to create majority of the websites layout.
+1. [Flask](https://flask.palletsprojects.com/en/2.0.x//)
+    -  Flask was used to create majority of the websites pages by way of routing (Pymongo, dnspython)
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the project's code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to edit the background hero image.
+1. [Heroku:](https://en.wikipedia.org/wiki/Heroku)
+    - Heroku is used to store the project's code after being pushed from Git and allows us to deploy the project live.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://user-images.githubusercontent.com/41737293/115411820-b91cf000-a1eb-11eb-8c64-47ec6c2f3150.png) during the design process.
+    - Balsamiq was used to create the [wireframes](https://user-images.githubusercontent.com/41737293/126455811-def56c72-13dd-4e5a-8e68-b0bd971de246.JPG) during the design process.
 
 ## Testing
 

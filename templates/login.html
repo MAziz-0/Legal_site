@@ -20,13 +20,10 @@
 
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-
-
-    <title></title>
 </head>
 
 <body class="bg-light">
-<!-- Flash message-->
+    <!-- Flash message-->
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     {% for msg in messages %}
@@ -59,7 +56,8 @@
                         </ul>
                     </li>
                     {% if session.user %}
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('add_question') }}">New Query</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('task') }}">Message Board</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Log out</a></li>

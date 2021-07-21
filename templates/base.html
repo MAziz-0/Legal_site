@@ -1,211 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename= 'static/assets/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename= 'static/assets/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename= 'static/assets/favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename= 'static/assets/favicon/apple-touch-icon.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename= 'static/assets/favicon/favicon-32x32.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename= 'static/assets/favicon/favicon-16x16.png') }}" />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <!-- Core theme CSS (includes Bootstrap)-->
-    
+
     <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    
-    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
 </head>
+
 <body>
-      <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-dark back-color">
-                <div class="container px-5">
-                    <a class="navbar-brand display-1" href="{{ url_for('index') }}">Nottreal Solicitors</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About </a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                    <li><a class="dropdown-item" href="{{ url_for('propertylaw') }}">Property</a></li>
-                                    <li><a class="dropdown-item" href="{{ url_for('litigation') }}">Litigation</a></li>
-                                    <li><a class="dropdown-item" href="{{ url_for('immigration') }}">Immigration</a></li>
-                                    <li><a class="dropdown-item" href="{{ url_for('family') }}">Family Law</a></li>
-                                    <li><a class="dropdown-item" href="{{ url_for('wills') }}">Wills & Probate</a></li>
-                                    <li><a class="dropdown-item" href="{{ url_for('employment') }}">Employment</a></li>
-                                    
-                                </ul>
-                            </li>
-                            {% if session.user %}
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('add_question') }}">New Query</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('task') }}">Message Board</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Log out</a></li>
-                            
-                            {% else %}
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Log in</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
-                                
-                            {% endif %} 
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Header-->
-            <header class="back-color py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-4 fw-bolder text-white mb-2">Nottreal Solicitors</h1>
-                                <p class="lead fw-normal text-white-50 mb-4">A helping hand towards a better future.</p>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Learn More</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="static/assets/images/lawyers.jpg" alt="Team Picture" onerror="this.onerror=null; this.src='static/assets/images/lawyers.jpg'"/></div>
-                    </div>
-                </div>
-            </header>
-            <!-- Features section-->
-            <section class="py-5" id="features">
-                <div class="container px-5 my-5">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </section>
-            <!-- Testimonial section-->
-            <div class="py-5 bg-light">
-                <div class="container px-5 my-5">
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-10 col-xl-7">
-                            <div class="text-center">
-                                <div class="fs-4 mb-4 fst-italic">"Nottreal were recommended to me and I was very impressed with them from the start. Neil and Jenny were always quick to reply to any questions and provided a fantastic service throughout.
-
-I would highly highly recommend them!"</div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <img class="rounded-circle me-3" src= "static/assets/images/matt.jpg" alt="..." />
-                                    <div class="fw-bold">
-                                        Matt Leblanc
-                                        <span class="fw-bold text-primary mx-1">|</span>
-                                        CEO, Friends Factory
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog preview section-->
-            <section class="py-5">
-                <div class="container px-5 my-5">
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6">
-                            <div class="text-center">
-                                <h2 class="fw-bolder">Quick Reads</h2>
-                                <p class="lead fw-small text-muted mb-5">Getting you up to speed on the latest news.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-5">
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="static/assets/images/mortgage.jpg" alt="..." />
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                    <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('mortgage') }}"><h5 class="card-title mb-3">How to get a Mortgage in 2021</h5></a>
-                                    <p class="card-text mb-0">Have you finally made the decision to make the jump and buy a home? Lets explore how to get a morgtage successfully in 2021.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" src="static/assets/images/karolina.jpg" alt="..." />
-                                            <div class="small">
-                                                <div class="fw-bold">Karolina Gretsky</div>
-                                                <div class="text-muted">March 12, 2021 &middot; 6 min read</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="static/assets/images/contract.jpg" alt="..." />
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
-                                    <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('employee') }}"><h5 class="card-title mb-3">Employee Rights</h5></a>
-                                    <p class="card-text mb-0">Learn what rights you have as an employee to maximise success in any corporate or non-corporate form of employment.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" src="static/assets/images/laila.jpg" alt="..." />
-                                            <div class="small">
-                                                <div class="fw-bold">Laila Khan</div>
-                                                <div class="text-muted">March 23, 2021 &middot; 4 min read</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="static/assets/images/tax.jpg" alt="..." />
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                    <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('tax') }}"><h5 class="card-title mb-3">Capital Gains Tax: Crypto</h5></a>
-                                    <p class="card-text mb-0">Clarity for retail investors in the new landscape of Cryptocurrency and the infamous stock market. </p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" src="static/assets/images/adedayo.jpg" alt="..."/>
-                                            <div class="small">
-                                                <div class="fw-bold">Adedayo Adesenya</div>
-                                                <div class="text-muted">April 2, 2021 &middot; 10 min read</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark back-color">
             <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Nottreal Solicitors <span id= "copyright"></span></div></div>
-                    <div class="col-auto">
-                        <span class="text-white mx-1"></span>
-                        <a class="link-light small" href="{{ url_for('contact') }}">Contact</a>
+                <a class="navbar-brand display-1" href="{{ url_for('index') }}">Nottreal Solicitors</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About </a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                <li><a class="dropdown-item" href="{{ url_for('propertylaw') }}">Property</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('litigation') }}">Litigation</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('immigration') }}">Immigration</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('family') }}">Family Law</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('wills') }}">Wills & Probate</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('employment') }}">Employment</a></li>
+                            </ul>
+                        </li>
+                        {% if session.user %}
+                        <li class="nav-item"><a class="nav-link"
+                                href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('add_question') }}">New Query</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('task') }}">Message Board</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Log out</a></li>
+
+                        {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Log in</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
+
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="back-color py-5">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-4 fw-bolder text-white mb-2">Nottreal Solicitors</h1>
+                            <p class="lead fw-normal text-white-50 mb-4">A helping hand towards a better future.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                        <img class="img-fluid rounded-3 my-5" src="static/assets/images/lawyers.jpg" alt="Team Picture"
+                            onerror="this.onerror=null; this.src='static/assets/images/lawyers.jpg'" />
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-       
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        </header>
+        <!-- Features section-->
+        <section class="py-5" id="features">
+            <div class="container px-5 my-5">
+                {% block content %} {% endblock %}
+            </div>
+        </section>
+        <!-- Testimonial section-->
+        <div class="py-5 bg-light">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-10 col-xl-7">
+                        <div class="text-center">
+                            <div class="fs-4 mb-4 fst-italic">
+                                "Nottreal were recommended to me and I was very impressed with them from the start. Neil
+                                and Jenny were always quick to reply to any questions and provided a fantastic service
+                                throughout. I would highly
+                                highly recommend them!"
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img class="rounded-circle me-3" src="static/assets/images/matt.jpg" alt="..." />
+                                <div class="fw-bold">
+                                    Matt Leblanc
+                                    <span class="fw-bold text-primary mx-1">|</span>
+                                    CEO, Friends Factory
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog preview section-->
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="text-center">
+                            <h2 class="fw-bolder">Quick Reads</h2>
+                            <p class="lead fw-small text-muted mb-5">Getting you up to speed on the latest news.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="static/assets/images/mortgage.jpg" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link"
+                                    href="{{ url_for('mortgage') }}">
+                                    <h5 class="card-title mb-3">How to get a Mortgage in 2021</h5>
+                                </a>
+                                <p class="card-text mb-0">Have you finally made the decision to make the jump and buy a
+                                    home? Lets explore how to get a morgtage successfully in 2021.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="static/assets/images/karolina.jpg"
+                                            alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Karolina Gretsky</div>
+                                            <div class="text-muted">March 12, 2021 &middot; 6 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="static/assets/images/contract.jpg" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                                <a class="text-decoration-none link-dark stretched-link"
+                                    href="{{ url_for('employee') }}">
+                                    <h5 class="card-title mb-3">Employee Rights</h5>
+                                </a>
+                                <p class="card-text mb-0">Learn what rights you have as an employee to maximise success
+                                    in any corporate or non-corporate form of employment.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="static/assets/images/laila.jpg"
+                                            alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Laila Khan</div>
+                                            <div class="text-muted">March 23, 2021 &middot; 4 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="static/assets/images/tax.jpg" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('tax') }}">
+                                    <h5 class="card-title mb-3">Capital Gains Tax: Crypto</h5>
+                                </a>
+                                <p class="card-text mb-0">Clarity for retail investors in the new landscape of
+                                    Cryptocurrency and the infamous stock market.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="static/assets/images/adedayo.jpg"
+                                            alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Adedayo Adesenya</div>
+                                            <div class="text-muted">April 2, 2021 &middot; 10 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer-->
+    <footer class="bg-dark py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; Nottreal Solicitors <span id="copyright"></span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <span class="text-white mx-1"></span>
+                    <a class="link-light small" href="{{ url_for('contact') }}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
 
-        <script>
-            $("#copyright").text(new Date().getFullYear());
-        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $("#copyright").text(new Date().getFullYear());
+    </script>
 </body>
+
 </html>

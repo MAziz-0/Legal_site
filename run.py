@@ -1,8 +1,6 @@
 import os
 import json
-from flask import (
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
+from flask import Flask, flash, render_template, redirect, request, session, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -46,6 +44,7 @@ def task():
     tasks = list(mongo.db.tasks.find())
     return render_template("myquestions.html", tasks=tasks)
 
+
 # Searching existing queries
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -87,7 +86,8 @@ def login():
         if registered_user:
             # Flash message - Hash password check
             if check_password_hash(
-                registered_user["password"], request.form.get("password")):
+                registered_user["password"], request.form.get("password")
+            ):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
@@ -107,8 +107,7 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # Collect the session username from the database
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    username = mongo.db.users.find_one({"username": session["user"]})["username"]
 
     if session["user"]:
         return render_template("profile.html", username=username)
@@ -131,26 +130,22 @@ def propertylaw():
 
 @app.route("/litigation")
 def litigation():
-    return render_template(
-        "litigation.html", page_name="Civil Litigation Services")
+    return render_template("litigation.html", page_name="Civil Litigation Services")
 
 
 @app.route("/immigration")
 def immigration():
-    return render_template(
-        "immigration.html", page_name="Immigration Services")
+    return render_template("immigration.html", page_name="Immigration Services")
 
 
 @app.route("/family")
 def family():
-    return render_template(
-        "family.html", page_name="Family Law")
+    return render_template("family.html", page_name="Family Law")
 
 
 @app.route("/wills")
 def wills():
-    return render_template(
-        "wills.html", page_name="Wills and Probate")
+    return render_template("wills.html", page_name="Wills and Probate")
 
 
 @app.route("/employment")
@@ -179,6 +174,7 @@ def tax():
 def contact():
     return render_template("contact.html", page_name="Contact Us")
 
+
 # Creating a new query
 @app.route("/add_question", methods=["GET", "POST"])
 def add_question():
@@ -188,7 +184,7 @@ def add_question():
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
-            "created_by": session["user"]
+            "created_by": session["user"],
         }
         mongo.db.tasks.insert_one(question)
         flash("Submitted successfully. You will receive an answer shortly.")
@@ -196,6 +192,7 @@ def add_question():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_question.html", categories=categories)
+
 
 # Editing Query
 @app.route("/edit_question/<task_id>", methods=["GET", "POST"])
@@ -206,15 +203,15 @@ def edit_question(task_id):
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
-            "created_by": session["user"]
+            "created_by": session["user"],
         }
         mongo.db.tasks.update({"_id": ObjectId(task_id)}, update)
         flash("Update successful")
         return redirect(url_for("add_question"))
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template(
-        "edit_question.html", task=task, categories=categories)
+    return render_template("edit_question.html", task=task, categories=categories)
+
 
 # Deleting a query
 @app.route("/delete_question/<task_id>")
