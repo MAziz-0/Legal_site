@@ -89,7 +89,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126494547-baee4fec-3f8d-467c-b029-246fd333bbad.JPG)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126495898-e6aef95a-5954-4316-a6d9-25b8e0c9572a.JPG)
-- Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator,which had multiple parsing errors out of my control.)
+- Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator,which had multiple parsing errors out of my control.
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -101,7 +101,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. There is a Learn More button that takes me to a feature section that allows me to read about some of the speciality services available.
         3. There is a testimonial section that shows a positive short review from a previous client.
         
-          -[View](https://user-images.githubusercontent.com/41737293/126496961-fe3a5647-8bd1-4fb4-83c8-b3d78e4a5a9f.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126496961-fe3a5647-8bd1-4fb4-83c8-b3d78e4a5a9f.JPG)
 
     2. As a First Time Visitor, I want to use the website as intended for it to function.
 
@@ -114,13 +114,13 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
     3. Logging in, an incorrect username shows a flash message.
 
-          -[View](https://user-images.githubusercontent.com/41737293/126498666-bea654dc-8ffa-436e-b62d-a2ed09508679.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126498666-bea654dc-8ffa-436e-b62d-a2ed09508679.JPG)
 
     3. As a First Time Visitor, I want to register and manipulate my data.
 
         1. I can register and log in to my account, which allows me to see the New query page and Message Board.
         
-          -[View](https://user-images.githubusercontent.com/41737293/126499391-9535b57f-4326-4b0c-8760-3209efea2c9f.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126499391-9535b57f-4326-4b0c-8760-3209efea2c9f.JPG)
 
           - [View](https://user-images.githubusercontent.com/41737293/126499543-991e83ef-ecdc-42d1-85e8-9dcbb6c6147f.JPG)
 
