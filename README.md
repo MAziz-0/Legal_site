@@ -101,7 +101,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. There is a Learn More button that takes me to a feature section that allows me to read about some of the speciality services available.
         3. There is a testimonial section that shows a positive short review from a previous client.
         
-          - [View](https://user-images.githubusercontent.com/41737293/126496961-fe3a5647-8bd1-4fb4-83c8-b3d78e4a5a9f.JPG)
+        - [View](https://user-images.githubusercontent.com/41737293/126496961-fe3a5647-8bd1-4fb4-83c8-b3d78e4a5a9f.JPG)
 
     2. As a First Time Visitor, I want to use the website as intended for it to function.
 
