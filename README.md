@@ -88,9 +88,8 @@ I have created a web application fit to showcase a faux solicitors firm, Nottrea
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure no syntax errors.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126494547-baee4fec-3f8d-467c-b029-246fd333bbad.JPG)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126495898-e6aef95a-5954-4316-a6d9-25b8e0c9572a.JPG
-
-(Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator, which had multiple parsing errors out of my control.)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126495898-e6aef95a-5954-4316-a6d9-25b8e0c9572a.JPG)
+- Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator,which had multiple parsing errors out of my control.)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -102,43 +101,43 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. There is a Learn More button that takes me to a feature section that allows me to read about some of the speciality services available.
         3. There is a testimonial section that shows a positive short review from a previous client.
         
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126496961-fe3a5647-8bd1-4fb4-83c8-b3d78e4a5a9f.JPG)
+          -[View](https://user-images.githubusercontent.com/41737293/126496961-fe3a5647-8bd1-4fb4-83c8-b3d78e4a5a9f.JPG)
 
     2. As a First Time Visitor, I want to use the website as intended for it to function.
 
         1. Each component of the website is straightforward and structured, separated by blocks, the main home page and each relevant service page, a login/register page which then allows the user to access the logged-in user features - Message board feature
         2. I can register an account without any issues, which allows me to see a profile page and the message board system, a flash message alerts me that I have logged in properly.
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126497699-6428264d-fc79-4f1f-9499-c8afb20a00b1.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126497699-6428264d-fc79-4f1f-9499-c8afb20a00b1.JPG)
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126497758-d7423de5-2347-4590-a007-ffefd2efca06.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126497758-d7423de5-2347-4590-a007-ffefd2efca06.JPG)
 
     3. Logging in, an incorrect username shows a flash message.
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126498666-bea654dc-8ffa-436e-b62d-a2ed09508679.JPG)
+          -[View](https://user-images.githubusercontent.com/41737293/126498666-bea654dc-8ffa-436e-b62d-a2ed09508679.JPG)
 
     3. As a First Time Visitor, I want to register and manipulate my data.
 
         1. I can register and log in to my account, which allows me to see the New query page and Message Board.
         
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499391-9535b57f-4326-4b0c-8760-3209efea2c9f.JPG)
+          -[View](https://user-images.githubusercontent.com/41737293/126499391-9535b57f-4326-4b0c-8760-3209efea2c9f.JPG)
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499543-991e83ef-ecdc-42d1-85e8-9dcbb6c6147f.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126499543-991e83ef-ecdc-42d1-85e8-9dcbb6c6147f.JPG)
 
         2. I can Edit/Update and Delete queries that I have created.
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499603-29b1c4ef-eba7-48f8-bbe2-08e12c8cbbe9.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126499603-29b1c4ef-eba7-48f8-bbe2-08e12c8cbbe9.JPG)
    
 
 -   #### Returning Visitor Goals
 
     1. As a Returning Visitor, I want to see that my questions are visible on the message board and get the information I need.
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499972-e0545a5e-b3b2-4322-b1bc-c2e6928bb6ba.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126499972-e0545a5e-b3b2-4322-b1bc-c2e6928bb6ba.JPG)
 
     2. As a Returning Visitor, I want to edit/update or even delete the queries I have posted.
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499603-29b1c4ef-eba7-48f8-bbe2-08e12c8cbbe9.JPG)
+          - [View](https://user-images.githubusercontent.com/41737293/126499603-29b1c4ef-eba7-48f8-bbe2-08e12c8cbbe9.JPG)
 
 
 
