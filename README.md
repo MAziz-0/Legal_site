@@ -2,7 +2,7 @@
 
 [View the live project here.](https://nottreal-solicitors.herokuapp.com/)
 
-I have created a web application fit to showcase a faux solictors firm Nottreal Solicitors which is inspired by the firms I have worked at in the past. Using my experience in the Legal sector I created a clean and approachable website that is a centerpiece for clients/potential clients to interact with. The Website consists of easily readable information pertaining the services it provides and articles on Legal and Financial news with the Message board being the key feature of the website bringing the consultation procedure directly to clients.
+I have created a web application fit to showcase a faux solicitors firm, Nottreal Solicitors which is inspired by the firms I have worked at in the past. Using my experience in the Legal sector, I created a clean and approachable website that is a centrepiece for clients/potential clients to interact with. The website consists of easily readable information pertaining to the services it provides and articles on Legal and Financial news, with the Message board being the key feature of the website bringing the consultation procedure directly to clients.
 
 <h2 align="center"><img src="https://user-images.githubusercontent.com/41737293/126453913-4c77d2ff-69a3-48c5-8fe0-1812047b7dd3.JPG"></h2>
 
@@ -11,11 +11,11 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 
 | CRITERIA | MEETS SPECIFICATIONS
 |---|:---
-| Home page | The user is greeted with a Home page which is the foundation of the website introducing the firm through its features section, a testomonial sections and blog system.
-| Services | The website has seperate pages with information on services the firm provides.
-| User Authentication | User can register an account which allows them the ability to log in and log out.
+| Home page | The user is greeted with a home page which is the website's foundation which introduces the firm through its features section, testimonial section and blog system.
+| Services | The Website has separate pages with information on services the firm provides.
+| User Authentication | The user can register an account that allows them to log in and log out.
 | Blog Articles| Article cards are available on the home page to provide Legal and Financial news.
-| Message Board | Once registered and logged in, users can ask questions using the New query page or they can search pre-existing questions. Questions they have asked have CRUD features implemented allowing them to manipulate their own data.
+| Message Board | Once registered and logged in, users can ask questions using the New query page, or they can search pre-existing questions. Questions they have asked have CRUD features implemented, allowing them to manipulate their data.
 
 
 ## User Experience (UX)
@@ -26,26 +26,26 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 
         1. As a First Time Visitor, I want to be pulled in by the presentation of the website.
         2. As a First Time Visitor, I want to use the website as intended for it to function.
-        3. As a First Time Visitor, I want to be able to register and manipulate my data.
+        3. As a First Time Visitor, I want to register and manipulate my data.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to see that my question are visible on the message board and I can get the information I need.
-        2. As a Returning Visitor, I want to be able to Edit/Update or even delete the queries I have posted.
+        1. As a Returning Visitor, I want to see that my questions are visible on the message board and get the information I need.
+        2. As a Returning Visitor, I want to edit/update or even delete the queries I have posted.
         
 
     -   #### Frequent User Goals
         1. As a Frequent User, I want to check to see if I can log into my account without issue.
         2. As a Frequent User, I want to check to see if there are any new featurettes in the Article cards
-        3. As a Frequent User, I want always to be able to navigate the website and find things where they are supposed to be.
+        3. As a Frequent User, I want to navigate the website and find things where they are supposed to be.
 
 -   ### Design
     -   #### Colour Scheme
-        The two main colours represent the firms company branding.
+        The two main colours represent the firm's company branding.
     -   #### Typography
-        -   The Segoe UI font is the main font used throughout the whole website. Segoe is standardised and used to achieve a professional and easy to read website, it is both attractive and appropriate.
+        -   The Segoe UI font is the main font used throughout the whole website. Segoe is standardised and used to achieve readability and professionalism; it is both attractive and appropriate.
     -   #### Imagery
-        -   Imagery is vital. The background hero images on the splash screen and About sections are designed to create familiarity with staff and putting a face behind the brand. .
+        -   Imagery is vital. The background hero images on the home pag and the About sections are designed to create familiarity with the staff and putting a face behind the brand.
 
 *   ### Wireframes
 
@@ -71,9 +71,9 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap](https://getbootstrap.com/)
-    -  Bootstrap was used to create majority of the websites layout.
+    -  Bootstrap was used to create for majority of the website.
 1. [Flask](https://flask.palletsprojects.com/en/2.0.x//)
-    -  Flask was used to create majority of the websites pages by way of routing (Pymongo, dnspython)
+    -  Flask was used to create the website's pages by way of routing (Pymongo, Dnspython)
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
@@ -85,104 +85,102 @@ I have created a web application fit to showcase a faux solictors firm Nottreal 
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure no syntax errors.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126494547-baee4fec-3f8d-467c-b029-246fd333bbad.JPG)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/115413571-31d07c00-a1ed-11eb-8a3c-d53d654d40d8.PNG)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://user-images.githubusercontent.com/41737293/126495898-e6aef95a-5954-4316-a6d9-25b8e0c9572a.JPG
+* Please note that CSS tested was Custom CSS I created; the free template used for Bootstrap styling did not pass through the validator, which had multiple parsing errors out of my control.
 
 ### Testing User Stories from User Experience (UX) Section
 
 -   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want to be pulled in by the theme of the website/game.
+    1. As a First Time Visitor, I want to be pulled in by the presentation of the website.
 
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable Splash screen, which introduces the plot and premise for the game. There is a Hero Image used in the background, which displays the enemy opponent(Itachi).
-        2. There is a brief tutorial text which tells the user how to play; not much detail is needed as the game is intuitive enough to pick up without instructions.
-        3. The splash screen has an appropriate timeout feature which gave me enough time to read the content and tutorial.
+        1. Upon entering the site, users are automatically greeted with a clean and inviting home page, introducing the firm and services. There is a Hero Image used next to the firm's name, which displays some of the members of staff.
+        2. There is a Learn More button that takes me to a feature section that allows me to read about some of the speciality services available.
+        3. There is a testimonial section that shows a positive short review from a previous client.
         
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/115718602-2c9d3980-a373-11eb-9bb3-32d5bd027e2d.JPG)
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126496961-fe3a5647-8bd1-4fb4-83c8-b3d78e4a5a9f.JPG)
 
-    2. As a First Time Visitor, I want to play the game as intended for it to function.
+    2. As a First Time Visitor, I want to use the website as intended for it to function.
 
-        1. Each component of the website is straightforward and structured, separated by a splash screen, the main game and finally, a victory or loss alert.
-        2. The timeout features are functional, the cards flips are fluid, and the timer works correctly.
+        1. Each component of the website is straightforward and structured, separated by blocks, the main home page and each relevant service page, a login/register page which then allows the user to access the logged-in user features - Message board feature
+        2. I can register an account without any issues, which allows me to see a profile page and the message board system, a flash message alerts me that I have logged in properly.
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/115718905-7d149700-a373-11eb-8f1b-294b13ca5ae6.JPG)
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126497699-6428264d-fc79-4f1f-9499-c8afb20a00b1.JPG)
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126497758-d7423de5-2347-4590-a007-ffefd2efca06.JPG)
 
-    3. There is an option to "Play again" when winning and "Try again" when losing; GIFs are also used to emphasise the win/loss.
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719038-9f0e1980-a373-11eb-95d2-2fdb8d038d1c.JPG)
+    3. Logging in, an incorrect username shows a flash message.
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126498666-bea654dc-8ffa-436e-b62d-a2ed09508679.JPG)
 
-    3. As a First Time Visitor, I want to learn more about the developer.
+    3. As a First Time Visitor, I want to register and manipulate my data.
 
-        1. Once the new visitor has won the game or lost the game; there is a link to the developer's portfolio.
-        2. Developer links are not as crucial and should not take away from experience; therefore, they are presented once the game session has ended.
+        1. I can register and log in to my account, which allows me to see the New query page and Message Board.
+        
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499391-9535b57f-4326-4b0c-8760-3209efea2c9f.JPG)
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499543-991e83ef-ecdc-42d1-85e8-9dcbb6c6147f.JPG)
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719349-e8f6ff80-a373-11eb-8918-b25f59a16c7d.JPG)
+        2. I can Edit/Update and Delete queries that I have created.
+
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499603-29b1c4ef-eba7-48f8-bbe2-08e12c8cbbe9.JPG)
    
 
 -   #### Returning Visitor Goals
 
-    1. As a Returning Visitor, I want to see if the game is fun being replayed.
+    1. As a Returning Visitor, I want to see that my questions are visible on the message board and get the information I need.
 
-        1. The cards are randomised, so each experience is different.
-        2. The use of a 30-second timer makes the game fast and exhilarating, which allows for replayability.
-        3. A suggestion is made at the end of the game to give more reasons for the player to challenge themself.
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499972-e0545a5e-b3b2-4322-b1bc-c2e6928bb6ba.JPG)
 
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719716-468b4c00-a374-11eb-8bb5-55e415c44ef4.JPG)
+    2. As a Returning Visitor, I want to edit/update or even delete the queries I have posted.
 
-    2. As a Returning Visitor, I want to find the best way to find out more about the developer.
-
-        1. A link to the developer's portfolio is readily available whether the game is won or lost.
-        2. The portfolio gives a base introduction and provides information on the developer's skillset and links to all socials.
-
-          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719947-7cc8cb80-a374-11eb-9842-7ca831a43f6f.JPG)
+          - Screenshot  [View](https://user-images.githubusercontent.com/41737293/126499603-29b1c4ef-eba7-48f8-bbe2-08e12c8cbbe9.JPG)
 
 
 
 
 -   #### Frequent User Goals
 
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or updates.
+    1. As a Frequent User, I want to check to see if I can log into my account without issue.
 
-        1. The user can continue to play in a conventional way or without memorising.
+        1. The user can log in without issue as long as the username and password are correct
 
-    2. As a Frequent User, I want to check to see if there are any new features.
+    2. As a Frequent User, I want to check to see if there are any new featurettes in the Article cards
 
-        1. The user would already be comfortable with the game but has access to the developer through the portfolio to see if they make any more updates or features.
+        1. Blogs can be updated by guest writers or members of staff; currently, there are three articles regarding highly talked about topics.
 
-    3. As a Frequent User, I want always to have fun playing the game; replayability is crucial.
+    3. As a Frequent User, I want to navigate the website and find things where they are supposed to be.
 
-        1. The memory game is fluid and works well, with a small timer which makes the game difficult if you aren't familiar with the images used as they are not simplified symbols.
-        2. There is an option to play the matching game without memorising the cards, making the game more intense and harder to win.
+        1. Navigation bar is simple and straightforward. 
+        2. Finding what you need is not difficult as everything is placed visibly and makes sense.
     
 
 ### Further Testing
 
 -   The live project has been tested  on a variety of devices such as Desktop and Samsung Note 10 +
--   A large amount of testing was done to ensure that the game is functional
--   Friends and family members were requested to review the site and documentation to point out any bugs or user experience issues, and all were content with the gaming experience.
+-   A large amount of testing was done to ensure that the website is responsive.
+-   Friends and family members were requested to review the site and documentation to point out any bugs or user experience issues, and all were content with the browsing experience.
 
 ### Known Bugs
 
--   On some mobile devices, the title image does not fit correctly, and the cards are cut off if the screen size is too small.
-    -   If the screen is too small, the "click to start" is pushed into the title image
--   On Microsoft Edge and Internet Explorer Browsers and some phones, the .gif/.webp format does not display correctly.
-    - Unable to get HTML5 Audio or iframe working correctly on mobile devices, only works after the game is restarted using the Try again/Play again alert.
+-   When navigating the login pages, once logged in, some of the images would stop working, unable to find a fix; as a workaround, I have removed some pictures as they are irrelevant to the feature.
 
-### GitHub Pages
+### Heroku
 
-The project was deployed to GitHub Pages using the following steps.
+The project was deployed to Heroku using the following steps.
 
-1. Log in to GitHub and locate the relevant Repository.
-2. At the top of the Repository (not top of page), find the "Settings" button on the menu.
-3. Scroll down the Settings menu until you find the Pages tab. Click on Pages
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Click on the Github Pages tab, which should provide a link to the live project.
+1. First, we need to tell Heroku which applications and dependencies are required to run our app by creating a text file.
+2. Procfile is what Heroku looks for to know which file runs the app, and how to run it, so we'll use the echo command to create a Procfile.
+3. Log into Heroku and "Create New App" and name the app appropriately. Select the region closest to you and create.
+4. We can use Heroku CLI or, to simplify the process, set up Automatic Deployment from our GitHub repository under the deploy tab in Heroku. Search Repository name and then add.
+[More info](https://devcenter.heroku.com/articles/heroku-cli)
+5. Before we start Automatic deployment, create a Config variable file under "Rev Config Vars" to tell Heroku what variables are needed. Make sure "Procfiles" and all required files have been pushed to the Repository before connecting.
+6. Click on connect to Github repository, and now we can click on Automatic deployment, which will push the master to Heroku.
+7. Click "View" to launch your new deployed app.
 
 ### Forking the GitHub Repository
 
-By forking the GitHub Repository, we make a copy of the original Repository on our GitHub account to view or make changes without affecting the original Repository by using the following steps.
+By forking the GitHub Repository, we copy the original Repository on our GitHub account to view or make changes without affecting the original Repository by using the following steps.
 
 1. Log in to GitHub and locate the relevant Repository.
 2. At the top of the Repository (not top of page), just above the "Settings" button on the menu, locate the "Fork" button.
@@ -192,9 +190,9 @@ By forking the GitHub Repository, we make a copy of the original Repository on o
 
 1. Log in to GitHub and locate the relevant Repository.
 2. Under the repository name, click "Clone or download".
-3. To clone the Repository using HTTPS, under "Clone with HTTPS", copy the link.
+3. To clone the Repository using HTTPS, copy the link under "Clone with HTTPS".
 4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
+5. Change the current working directory to where you want the cloned directory to be made.
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
@@ -216,27 +214,22 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ### Code
 
--   [SweetAlert2](https://sweetalert2.github.io/): SweetAlert2 used to create beautiful and responsive alerts.
+-   [Modern Business template](https://startbootstrap.com/template/modern-business): Modern Business template was used to create the base layout for the website.
 
 ### Content
 
--   All text content was written by the developer.
-
--   All materials on this Site(Naruto), including, but not limited to characters, images, illustrations, audio clips, video clips, and compilations, are protected by copyrights, trademarks, and other intellectual property rights which are owned and controlled by VIZ Media, LLC. and its affiliates (collectively, "VIZ Media, SHONEN JUMP, Shojo Beat")
+-   All Legal content was sourced from various Legal websites, none of the information will be used for commercial purposes as this is a educational project.
 
 
 ### Media
 
--   The Full-screen background image came from this [Wallpaperaccess](https://wallpaperaccess.com/uchiha-fan)
--   The Victory .webp came from this [Tenor](https://tenor.com/view/happy-naruto-smile-gif-12599252)
--   The Loss .webp came from this [Cute Wallpaper](https://cutewallpaper.org/21/wallpaper-mangekyou-sharingan-gif/Top-30-Sharingan-GIFs-Find-the-best-GIF-on-Gfycat.gif)
--   The Splash screen background image came from this [Wallpaper Abyss](https://wall.alphacoders.com/big.php?i=1093657)
--   The Card images came from [Pinterest](https://www.pinterest.co.uk/)
--   The Favicon icon came from [Icon Library](https://icon-library.com/icon/naruto-icon-13.html)
+-   The background images came from [Pexels](https://www.pexels.com/)
+-   The Bootstrap template came from [StartBootstrap](https://startbootstrap.com/template/modern-business)
+-   The Favicon icon came from [Wikimedia](https://commons.wikimedia.org/wiki/File:Eo_circle_purple_letter-n.svg)
 
 ### Acknowledgements
 
--   Javascript logic inspired by OurCodeSolution (https://ourcodesolution.com/)
+-   Python/Flask logic learn from Code Institute Instructional videos 
 
 -   My Mentor for continuous helpful feedback.
 
