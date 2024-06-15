@@ -1,5 +1,7 @@
 <h1 align="center">Nottreal Solicitors</h1>
 
+No longer available as I have lost access to my Heroku Account
+
 [View the live project here.](https://nottreal-solicitors.herokuapp.com/)
 
 I have created a web application fit to showcase a faux solicitors firm, Nottreal Solicitors which is inspired by the firms I have worked at in the past. Using my experience in the Legal sector, I created a clean and approachable website that is a centrepiece for clients/potential clients to interact with. The website consists of easily readable information pertaining to the services it provides and articles on Legal and Financial news, with the Message board being the key feature of the website bringing the consultation procedure directly to clients.
